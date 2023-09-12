@@ -193,17 +193,6 @@ const Object = require('Object');
 const copyFromWindow = require('copyFromWindow');
 const callInWindow = require('callInWindow');
 
-/*
-const payload = {order: {}};
-const unwantedKeys = ['cart', 'cartObjectIdVarName', 'cartObjectQuantityVarName', 'cartObjectPriceVarName', 'cartObjectSkuVarName', 'gtmEventId', 'gtmOnFailure', 'gtmOnSuccess', 'gtmTagId'];
-const dataKeys = Object.keys(data).filter((key) => unwantedKeys.indexOf(key) === -1);
-
-for (let i = 0; i < dataKeys.length; i++) {
-  payload.order[dataKeys[i]] = data[dataKeys[i]] || null;
-}
-*/
-
-
 const payload = {
   order: {
     orderid: data.orderid || null,
@@ -401,6 +390,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 9/12/2023, 12:16:39 PM
+Created on 9/12/2023, 1:09:48 PM
 
 

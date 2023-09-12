@@ -193,13 +193,39 @@ const Object = require('Object');
 const copyFromWindow = require('copyFromWindow');
 const callInWindow = require('callInWindow');
 
+/*
 const payload = {order: {}};
 const unwantedKeys = ['cart', 'cartObjectIdVarName', 'cartObjectQuantityVarName', 'cartObjectPriceVarName', 'cartObjectSkuVarName', 'gtmEventId', 'gtmOnFailure', 'gtmOnSuccess', 'gtmTagId'];
 const dataKeys = Object.keys(data).filter((key) => unwantedKeys.indexOf(key) === -1);
 
 for (let i = 0; i < dataKeys.length; i++) {
-  payload.order[dataKeys[i]] = data[dataKeys[i]];
+  payload.order[dataKeys[i]] = data[dataKeys[i]] || null;
 }
+*/
+
+
+const payload = {
+  order: {
+    orderid: data.orderid || null,
+    currency: data.currency || null,
+    totalcartvalue: data.totalcartvalue || null,
+    subtotalcartvalue: data.subtotalcartvalue || null,
+    tax: data.tax || null,
+    shippingmethodcost: data.shippingmethodcost || null,
+    couponcode: data.couponcode || null,
+    discountvalue: data.discountvalue || null,
+    discountsapplied: data.discountsapplied || null,
+    paymentmethod: data.paymentmethod || null,
+    shippingmethod: data.shippingmethod || null,
+    billcity: data.billcity || null,
+    billstate: data.billstate || null,
+    billcountry: data.billcountry || null,
+    shipcity: data.shipcity || null,
+    shipstate: data.shipstate || null,
+    shipcountry: data.shipcountry || null,
+    cart: null
+  }
+};
 
 let cart;
 if (data.cart) {
@@ -375,6 +401,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 8/31/2023, 3:14:49 PM
+Created on 9/12/2023, 12:16:39 PM
 
 

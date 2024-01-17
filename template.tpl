@@ -195,23 +195,23 @@ const callInWindow = require('callInWindow');
 
 const payload = {
   order: {
-    orderid: data.orderid || null,
-    currency: data.currency || null,
-    totalcartvalue: data.totalcartvalue || null,
-    subtotalcartvalue: data.subtotalcartvalue || null,
-    tax: data.tax || null,
-    shippingmethodcost: data.shippingmethodcost || null,
-    couponcode: data.couponcode || null,
-    discountvalue: data.discountvalue || null,
-    discountsapplied: data.discountsapplied || null,
-    paymentmethod: data.paymentmethod || null,
-    shippingmethod: data.shippingmethod || null,
-    billcity: data.billcity || null,
-    billstate: data.billstate || null,
-    billcountry: data.billcountry || null,
-    shipcity: data.shipcity || null,
-    shipstate: data.shipstate || null,
-    shipcountry: data.shipcountry || null,
+    orderid: data.orderid,
+    currency: data.currency,
+    totalcartvalue: data.totalcartvalue,
+    subtotalcartvalue: data.subtotalcartvalue,
+    tax: data.tax,
+    shippingmethodcost: data.shippingmethodcost,
+    couponcode: data.couponcode,
+    discountvalue: data.discountvalue,
+    discountsapplied: data.discountsapplied,
+    paymentmethod: data.paymentmethod,
+    shippingmethod: data.shippingmethod,
+    billcity: data.billcity,
+    billstate: data.billstate,
+    billcountry: data.billcountry,
+    shipcity: data.shipcity,
+    shipstate: data.shipstate,
+    shipcountry: data.shipcountry,
     cart: null
   }
 };
@@ -390,6 +390,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 9/12/2023, 1:09:48 PM
+Created on 1/16/2024, 6:47:58 PM
 
 
